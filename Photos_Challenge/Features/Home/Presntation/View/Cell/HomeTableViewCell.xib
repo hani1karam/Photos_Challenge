@@ -59,6 +59,7 @@
                             <constraint firstAttribute="trailing" secondItem="6Ga-eT-B4E" secondAttribute="trailing" id="LA8-9d-zkP"/>
                             <constraint firstAttribute="bottom" secondItem="6Ga-eT-B4E" secondAttribute="bottom" id="cE5-iU-1G2"/>
                             <constraint firstItem="6Ga-eT-B4E" firstAttribute="top" secondItem="TZl-f2-4H4" secondAttribute="top" id="ggF-Db-O3c"/>
+                            <constraint firstAttribute="height" constant="205" id="hWo-Hl-xem"/>
                             <constraint firstAttribute="trailing" secondItem="6Ga-eT-B4E" secondAttribute="trailing" id="tY4-pT-Yfo"/>
                         </constraints>
                     </view>
