@@ -34,7 +34,6 @@ class ImageLoader {
             let task = URLSession.shared.dataTask(with: url as URL) {
                 data, response, error in
                 if (error != nil) {
-                    print(error?.localizedDescription)
                     completionHandler(nil, urlString)
                     return
                 }

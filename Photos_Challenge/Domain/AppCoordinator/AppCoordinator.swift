@@ -23,7 +23,7 @@ class AppCoordinator: BaseCoordinator {
     }
     private func show() -> UIViewController {
         removeChildCoordinators()
-        let coordinator = AppDelegate.container.resolve(MoviesViewCoordinator.self)!
+        let coordinator = AppDelegate.container.resolve(PhotosViewCoordinator.self)!
         return start(coordinator: coordinator)
     }
 }
