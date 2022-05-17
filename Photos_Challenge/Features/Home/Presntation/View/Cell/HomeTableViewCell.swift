@@ -11,15 +11,14 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var bagroundView: UIView?
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var photoImageView: UIImageView?
- 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-         self.photoImageView?.contentMode =   UIView.ContentMode.scaleAspectFit
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     func reloadCellProudctImage(image: Photo) {
