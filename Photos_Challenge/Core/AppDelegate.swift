@@ -8,7 +8,6 @@
 import UIKit
 import CoreData
 import Swinject
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

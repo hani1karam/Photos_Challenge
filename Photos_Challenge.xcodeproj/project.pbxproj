@@ -37,13 +37,9 @@
 		D72EAA762834310000193E0D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA752834310000193E0D /* AppCoordinator.swift */; };
 		D72EAA7A2834311400193E0D /* BaseVoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA792834311400193E0D /* BaseVoordinator.swift */; };
 		D72EAA7F283431E000193E0D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA7E283431E000193E0D /* Swinject */; };
-		D72EAA81283431E000193E0D /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA80283431E000193E0D /* Swinject-Dynamic */; };
-		D72EAA82283431E000193E0D /* Swinject-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA80283431E000193E0D /* Swinject-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D72EAA872834321600193E0D /* Container + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA862834321600193E0D /* Container + ViewModel.swift */; };
 		D72EAA8D2834322F00193E0D /* RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA8C2834322F00193E0D /* RegisterDependencies.swift */; };
 		D72EAA922834332C00193E0D /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA912834332C00193E0D /* SwinjectAutoregistration */; };
-		D72EAA942834332C00193E0D /* SwinjectAutoregistration-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA932834332C00193E0D /* SwinjectAutoregistration-Dynamic */; };
-		D72EAA952834332C00193E0D /* SwinjectAutoregistration-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA932834332C00193E0D /* SwinjectAutoregistration-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +67,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D72EAA3D283424F600193E0D /* NetworkManager.framework in Embed Frameworks */,
-				D72EAA952834332C00193E0D /* SwinjectAutoregistration-Dynamic in Embed Frameworks */,
-				D72EAA82283431E000193E0D /* Swinject-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,10 +116,8 @@
 			files = (
 				D72EAA922834332C00193E0D /* SwinjectAutoregistration in Frameworks */,
 				D72EAA1428341F7E00193E0D /* RxRelay in Frameworks */,
-				D72EAA942834332C00193E0D /* SwinjectAutoregistration-Dynamic in Frameworks */,
 				D72EAA7F283431E000193E0D /* Swinject in Frameworks */,
 				D72EAA3C283424F600193E0D /* NetworkManager.framework in Frameworks */,
-				D72EAA81283431E000193E0D /* Swinject-Dynamic in Frameworks */,
 				D72EAA1228341F7E00193E0D /* RxCocoa in Frameworks */,
 				D72EAA1028341F7E00193E0D /* RxSwift in Frameworks */,
 			);
@@ -409,9 +401,7 @@
 				D72EAA1128341F7E00193E0D /* RxCocoa */,
 				D72EAA1328341F7E00193E0D /* RxRelay */,
 				D72EAA7E283431E000193E0D /* Swinject */,
-				D72EAA80283431E000193E0D /* Swinject-Dynamic */,
 				D72EAA912834332C00193E0D /* SwinjectAutoregistration */,
-				D72EAA932834332C00193E0D /* SwinjectAutoregistration-Dynamic */,
 			);
 			productName = Photos_Challenge;
 			productReference = D72EA9B028341BAF00193E0D /* Photos_Challenge.app */;
@@ -926,20 +916,10 @@
 			package = D72EAA7D283431E000193E0D /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		D72EAA80283431E000193E0D /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D72EAA7D283431E000193E0D /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
-		};
 		D72EAA912834332C00193E0D /* SwinjectAutoregistration */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D72EAA902834332C00193E0D /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
-		};
-		D72EAA932834332C00193E0D /* SwinjectAutoregistration-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D72EAA902834332C00193E0D /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
-			productName = "SwinjectAutoregistration-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 
