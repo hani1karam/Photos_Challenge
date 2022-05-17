@@ -31,6 +31,7 @@ class HomeVC: UIViewController {
             guard let photosData = dataItem.photos?.photo else {return}
             Observable.of(photosData).bind(to:(self?.homeTV.rx.items(cellIdentifier: HomeVC.cellIdentifierDemoCell, cellType: HomeTableViewCell.self))!){[weak self] row,branch,cell in
                 cell.reloadCellProudctImage(image: branch)
+                cell.titleLabel?.text = branch.title
             }.disposed(by: self?.disposeBag ?? DisposeBag())
         }).disposed(by: disposeBag)
     }
