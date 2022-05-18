@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D72EA9B428341BAF00193E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EA9B328341BAF00193E0D /* AppDelegate.swift */; };
-		D72EA9BE28341BAF00193E0D /* Photos_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D72EA9BC28341BAF00193E0D /* Photos_Challenge.xcdatamodeld */; };
+		D72EA9BE28341BAF00193E0D /* Photos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D72EA9BC28341BAF00193E0D /* Photos.xcdatamodeld */; };
 		D72EA9C028341BB100193E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72EA9BF28341BB100193E0D /* Assets.xcassets */; };
 		D72EA9C328341BB100193E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72EA9C128341BB100193E0D /* LaunchScreen.storyboard */; };
 		D72EA9CE28341BB200193E0D /* Photos_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EA9CD28341BB200193E0D /* Photos_ChallengeTests.swift */; };
@@ -40,6 +40,13 @@
 		D72EAA872834321600193E0D /* Container + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA862834321600193E0D /* Container + ViewModel.swift */; };
 		D72EAA8D2834322F00193E0D /* RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA8C2834322F00193E0D /* RegisterDependencies.swift */; };
 		D72EAA922834332C00193E0D /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D72EAA912834332C00193E0D /* SwinjectAutoregistration */; };
+		D72EAAA02835627100193E0D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA9F2835627000193E0D /* CoreDataHelper.swift */; };
+		D72EAAA62835629A00193E0D /* DatabaseHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAA52835629A00193E0D /* DatabaseHelperProtocol.swift */; };
+		D72EAAAA283562B300193E0D /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAA9283562B300193E0D /* DatabaseManagerProtocol.swift */; };
+		D72EAAAE283562EC00193E0D /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAAD283562EC00193E0D /* ItemModel.swift */; };
+		D72EAAB22835637C00193E0D /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAB12835637C00193E0D /* DataUser.swift */; };
+		D72EAAD1283596EB00193E0D /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAD0283596EB00193E0D /* GetData.swift */; };
+		D72EAAD528359CB500193E0D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAD428359CB500193E0D /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +114,13 @@
 		D72EAA792834311400193E0D /* BaseVoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVoordinator.swift; sourceTree = "<group>"; };
 		D72EAA862834321600193E0D /* Container + ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container + ViewModel.swift"; sourceTree = "<group>"; };
 		D72EAA8C2834322F00193E0D /* RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDependencies.swift; sourceTree = "<group>"; };
+		D72EAA9F2835627000193E0D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		D72EAAA52835629A00193E0D /* DatabaseHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelperProtocol.swift; sourceTree = "<group>"; };
+		D72EAAA9283562B300193E0D /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
+		D72EAAAD283562EC00193E0D /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		D72EAAB12835637C00193E0D /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
+		D72EAAD0283596EB00193E0D /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
+		D72EAAD428359CB500193E0D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +184,7 @@
 				D72EA9EF28341E6400193E0D /* Core */,
 				D72EA9F628341E7000193E0D /* Resources */,
 				D72EA9C428341BB100193E0D /* Info.plist */,
-				D72EA9BC28341BAF00193E0D /* Photos_Challenge.xcdatamodeld */,
+				D72EA9BC28341BAF00193E0D /* Photos.xcdatamodeld */,
 			);
 			path = Photos_Challenge;
 			sourceTree = "<group>";
@@ -347,8 +361,11 @@
 		D72EAA5B2834286600193E0D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D72EAA9E2835625E00193E0D /* CoreData */,
 				D72EAA74283430F100193E0D /* AppCoordinator */,
 				D72EAA6928342FB500193E0D /* ImageLoader.swift */,
+				D72EAAD0283596EB00193E0D /* GetData.swift */,
+				D72EAAD428359CB500193E0D /* Reachability.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -377,6 +394,18 @@
 				D72EAA8C2834322F00193E0D /* RegisterDependencies.swift */,
 			);
 			path = "Dependacy injection";
+			sourceTree = "<group>";
+		};
+		D72EAA9E2835625E00193E0D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D72EAA9F2835627000193E0D /* CoreDataHelper.swift */,
+				D72EAAA52835629A00193E0D /* DatabaseHelperProtocol.swift */,
+				D72EAAA9283562B300193E0D /* DatabaseManagerProtocol.swift */,
+				D72EAAAD283562EC00193E0D /* ItemModel.swift */,
+				D72EAAB12835637C00193E0D /* DataUser.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,22 +556,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D72EA9BE28341BAF00193E0D /* Photos_Challenge.xcdatamodeld in Sources */,
+				D72EAAA62835629A00193E0D /* DatabaseHelperProtocol.swift in Sources */,
+				D72EA9BE28341BAF00193E0D /* Photos.xcdatamodeld in Sources */,
 				D72EAA8D2834322F00193E0D /* RegisterDependencies.swift in Sources */,
 				D72EAA432834256400193E0D /* HomeUseCase.swift in Sources */,
+				D72EAAAA283562B300193E0D /* DatabaseManagerProtocol.swift in Sources */,
 				D72EAA762834310000193E0D /* AppCoordinator.swift in Sources */,
+				D72EAAA02835627100193E0D /* CoreDataHelper.swift in Sources */,
 				D72EAA6A28342FB500193E0D /* ImageLoader.swift in Sources */,
 				D72EAA2A2834241100193E0D /* HomeRepository.swift in Sources */,
 				D72EAA4E2834267400193E0D /* HomeVC.swift in Sources */,
+				D72EAAAE283562EC00193E0D /* ItemModel.swift in Sources */,
 				D72EAA492834261D00193E0D /* HomeViewModel.swift in Sources */,
 				D72EAA6F283430CF00193E0D /* PhotosViewCoordinator.swift in Sources */,
 				D72EAA7A2834311400193E0D /* BaseVoordinator.swift in Sources */,
 				D72EAA332834249C00193E0D /* HomeRepositoryImpl.swift in Sources */,
+				D72EAAD528359CB500193E0D /* Reachability.swift in Sources */,
 				D72EAA872834321600193E0D /* Container + ViewModel.swift in Sources */,
 				D72EAA572834276B00193E0D /* HomeTableViewCell.swift in Sources */,
 				D72EAA0A28341F1900193E0D /* HomeDataSource.swift in Sources */,
 				D72EA9B428341BAF00193E0D /* AppDelegate.swift in Sources */,
 				D72EAA1A28341FD800193E0D /* ImagesModel.swift in Sources */,
+				D72EAAD1283596EB00193E0D /* GetData.swift in Sources */,
+				D72EAAB22835637C00193E0D /* DataUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB6MTB7YS3;
 				INFOPLIST_FILE = Photos_Challenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -732,6 +769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB6MTB7YS3;
 				INFOPLIST_FILE = Photos_Challenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -924,13 +962,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		D72EA9BC28341BAF00193E0D /* Photos_Challenge.xcdatamodeld */ = {
+		D72EA9BC28341BAF00193E0D /* Photos.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				D72EA9BD28341BAF00193E0D /* Photos_Challenge.xcdatamodel */,
 			);
 			currentVersion = D72EA9BD28341BAF00193E0D /* Photos_Challenge.xcdatamodel */;
-			path = Photos_Challenge.xcdatamodeld;
+			path = Photos.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -14,6 +14,5 @@ class HomeUseCase{
     }
     func featchImages() -> Observable<ImagesModel>{
         return homeRepository.featchImages()
-        
     }
 }

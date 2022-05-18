@@ -12,6 +12,7 @@ extension Container {
     func registerViewModel() {
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
         autoregister(HomeUseCase.self, initializer: HomeUseCase.init)
+        autoregister(DatabaseManagerProtocol.self, initializer: DatabaseManager.init)
     }
     func registerCoordinator() {
         autoregister(AppCoordinator.self, initializer: AppCoordinator.init)

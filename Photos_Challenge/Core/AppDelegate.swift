@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.container.registerDependencies()
         appCoordinator = AppDelegate.container.resolve(AppCoordinator.self)!
         _ = appCoordinator.start()
+        _ = CoreDataHelper.shared.persistentContainer.viewContext
         return true
     }
     
