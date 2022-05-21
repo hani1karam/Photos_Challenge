@@ -7,5 +7,5 @@
 
 import RxSwift
 protocol HomeRepository{
-    func featchImages()-> Observable<ImagesModel>
+    func featchImages(page:Int)-> Observable<ImagesModel>
 }

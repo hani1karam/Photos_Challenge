@@ -7,7 +7,7 @@
 
 import RxSwift
 protocol HomeDataSource {
-    func featchImages() -> Observable<ImagesModel>
+    func featchImages(page:Int) -> Observable<ImagesModel>
 }
 final class HomeDataSourceImpl:HomeDataSource{
     private var networkManager: DataProviderProtocol
@@ -16,9 +16,9 @@ final class HomeDataSourceImpl:HomeDataSource{
         self.networkManager = networkManager
         self.dataManager = dataManager
     }
-    func featchImages() -> Observable<ImagesModel> {
+    func featchImages(page:Int) -> Observable<ImagesModel> {
         if Reachability.isConnectedToNetwork(){
-            let placesRequest = SimpleGetRequest(url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=50&text=Color&page=1&per_page=20&api_key=d17378e37e555ebef55ab86c4180e8dc",parameters: nil, method: .get)
+            let placesRequest = SimpleGetRequest(url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=50&text=Color&page=\(page)&per_page=20&api_key=d17378e37e555ebef55ab86c4180e8dc",parameters: nil, method: .get)
             return Observable.create{[weak self] (observer) -> Disposable in
                 self?.networkManager.sentRequest(request: placesRequest, mapResponseOnType: ImagesModel.self, successHandler: { [weak self] (result)  in
                     observer.onNext((result))
@@ -36,7 +36,7 @@ final class HomeDataSourceImpl:HomeDataSource{
             }
         }
         else{
-            return Observable.create{[weak self] (observer) -> Disposable in
+            return Observable.create{(observer) -> Disposable in
                 return Disposables.create()
             }
         }
