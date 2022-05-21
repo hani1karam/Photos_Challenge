@@ -8,6 +8,8 @@
 import RxSwift
 class HomeViewModel{
     let homeUseCase: HomeUseCase
+    var itemSelected = PublishSubject<Photo>()
+
     init(homeUseCase: HomeUseCase) {
         self.homeUseCase = homeUseCase
     }

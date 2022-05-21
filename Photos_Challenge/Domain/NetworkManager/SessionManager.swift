@@ -6,8 +6,8 @@
 //
 
 import Alamofire
-
-extension SessionManager {
+import Foundation
+extension Session {
     func request(_ request: RequestProtocol) -> DataRequest {
         return self.request(request.url,
                             method: request.method,
@@ -19,7 +19,7 @@ extension SessionManager {
 
 struct APIClient: DataProviderProtocol {
     public func sentRequest<ResponseType>(request: RequestProtocol, mapResponseOnType: ResponseType.Type, successHandler: @escaping (ResponseType) -> Void, failureHandler: @escaping (Error) -> Void) where ResponseType : Decodable, ResponseType : Encodable {
-        SessionManager.default.request(request).validate().responseJSON { (response) in
+        Session.default.request(request).validate().responseJSON { (response) in
             switch response.result {
             case .success:
                 do {

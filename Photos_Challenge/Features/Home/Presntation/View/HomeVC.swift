@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         showCatrogy()
         fetchData()
+        setUpUTableViewDelegate()
     }
     func showCatrogy(){
         homeTV.register(UINib(nibName: HomeVC.cellIdentifierDemoCell, bundle: nil), forCellReuseIdentifier: HomeVC.cellIdentifierDemoCell)
@@ -35,4 +36,14 @@ class HomeVC: UIViewController {
             }.disposed(by: self?.disposeBag ?? DisposeBag())
         }).disposed(by: disposeBag)
     }
+    func setUpUTableViewDelegate() {
+        homeTV
+            .rx
+            .modelSelected(Photo.self)
+            .subscribe(onNext: { [weak self]  branch in
+                self?.homeViewModel?.itemSelected.onNext(branch)
+            })
+            .disposed(by: disposeBag)
+    }
+    
 }
