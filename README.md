@@ -19,9 +19,9 @@ MVVM with Clean Architecture is pretty good in such cases. It goes one step furt
 
 * Home Screen
 
-  <img align="left" width="200" height="400" img src="PicApp - Apple iPhone X.png">
+  <img align="left" width="200" height="400" img src="Simulator Screen Shot - iPhone 11 - 2022-05-21 at 23.40.12.png">
 
 
 * Detials Info Movies Screen
 
-  <img align="left" width="200" height="400" img src="DetailsInfo.png">
+  <img align="left" width="200" height="400" img src="Simulator Screen Shot - iPhone 11 - 2022-05-21 at 23.40.16.png">
