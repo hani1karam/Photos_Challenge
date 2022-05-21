@@ -29,7 +29,6 @@ final class HomeDataSourceImpl:HomeDataSource{
                     }
                 })
                 { (error) in
-                    print(error)
                     observer.onError(error)
                 }
                 return Disposables.create()
