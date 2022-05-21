@@ -22,7 +22,7 @@ class HomeVC: UIViewController {
         let view = UIView(frame: CGRect(
                             x: 0,
                             y: 0,
-                            width: 100,
+                            width: self.view.frame.size.width,
                             height: 100)
         )
         let spinner = UIActivityIndicatorView()
@@ -41,7 +41,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         layout()
         bind()
-        
+        setUpUTableViewDelegate()
         refreshControl.addTarget(self, action: #selector(refreshControlTriggered), for: .valueChanged)
     }
     
@@ -93,6 +93,15 @@ class HomeVC: UIViewController {
     
     @objc private func refreshControlTriggered() {
         homeViewModel?.refreshControlAction.onNext(())
+    }
+    func setUpUTableViewDelegate() {
+        homeTableView
+            .rx
+            .modelSelected(Photo.self)
+            .subscribe(onNext: { [weak self]  branch in
+                self?.homeViewModel?.itemSelected.onNext(branch)
+            })
+            .disposed(by: disposeBag)
     }
 }
 //MARK: - TableViewDelegate
