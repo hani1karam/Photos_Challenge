@@ -95,8 +95,6 @@ class HomeVC: UIViewController {
         homeViewModel?.refreshControlAction.onNext(())
     }
 }
-
-
 //MARK: - TableViewDelegate
 extension HomeVC:UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
