@@ -15,6 +15,7 @@ class HomeUseCase{
     init(homeRepository: HomeRepository){
         self.homeRepository = homeRepository
     }
+    
     func featchImages(page:Int) -> Observable<ImagesModel>{
         return homeRepository.featchImages(page:page)
     }
