@@ -24,8 +24,6 @@
 		D72EAA1A28341FD800193E0D /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA1928341FD800193E0D /* ImagesModel.swift */; };
 		D72EAA2A2834241100193E0D /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA292834241100193E0D /* HomeRepository.swift */; };
 		D72EAA332834249C00193E0D /* HomeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA322834249C00193E0D /* HomeRepositoryImpl.swift */; };
-		D72EAA3C283424F600193E0D /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72EAA3B283424F600193E0D /* NetworkManager.framework */; };
-		D72EAA3D283424F600193E0D /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D72EAA3B283424F600193E0D /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D72EAA432834256400193E0D /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA422834256400193E0D /* HomeUseCase.swift */; };
 		D72EAA492834261D00193E0D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA482834261D00193E0D /* HomeViewModel.swift */; };
 		D72EAA4E2834267400193E0D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAA4C2834267400193E0D /* HomeVC.swift */; };
@@ -47,6 +45,8 @@
 		D72EAAB22835637C00193E0D /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAB12835637C00193E0D /* DataUser.swift */; };
 		D72EAAD1283596EB00193E0D /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAD0283596EB00193E0D /* GetData.swift */; };
 		D72EAAD528359CB500193E0D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72EAAD428359CB500193E0D /* Reachability.swift */; };
+		D732731D2838E9F700D524BF /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732731C2838E9F700D524BF /* NetworkManager.framework */; };
+		D732731E2838E9F700D524BF /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D732731C2838E9F700D524BF /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +67,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D72EAA3E283424F600193E0D /* Embed Frameworks */ = {
+		D732731F2838E9F700D524BF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D72EAA3D283424F600193E0D /* NetworkManager.framework in Embed Frameworks */,
+				D732731E2838E9F700D524BF /* NetworkManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +121,7 @@
 		D72EAAB12835637C00193E0D /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
 		D72EAAD0283596EB00193E0D /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		D72EAAD428359CB500193E0D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D732731C2838E9F700D524BF /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +132,7 @@
 				D72EAA922834332C00193E0D /* SwinjectAutoregistration in Frameworks */,
 				D72EAA1428341F7E00193E0D /* RxRelay in Frameworks */,
 				D72EAA7F283431E000193E0D /* Swinject in Frameworks */,
-				D72EAA3C283424F600193E0D /* NetworkManager.framework in Frameworks */,
+				D732731D2838E9F700D524BF /* NetworkManager.framework in Frameworks */,
 				D72EAA1228341F7E00193E0D /* RxCocoa in Frameworks */,
 				D72EAA1028341F7E00193E0D /* RxSwift in Frameworks */,
 			);
@@ -318,6 +319,7 @@
 		D72EAA3A283424F600193E0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D732731C2838E9F700D524BF /* NetworkManager.framework */,
 				D72EAA3B283424F600193E0D /* NetworkManager.framework */,
 			);
 			name = Frameworks;
@@ -418,7 +420,7 @@
 				D72EA9AC28341BAF00193E0D /* Sources */,
 				D72EA9AD28341BAF00193E0D /* Frameworks */,
 				D72EA9AE28341BAF00193E0D /* Resources */,
-				D72EAA3E283424F600193E0D /* Embed Frameworks */,
+				D732731F2838E9F700D524BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
