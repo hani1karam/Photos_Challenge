@@ -6,8 +6,6 @@
 //
 
 import RxSwift
-import NetworkManager
-
 protocol HomeDataSource {
     func featchImages() -> Observable<ImagesModel>
 }

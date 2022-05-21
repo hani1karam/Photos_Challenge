@@ -7,7 +7,6 @@
 
 import Swinject
 import SwinjectAutoregistration
-import NetworkManager
 extension Container {
     func registerViewModel() {
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
