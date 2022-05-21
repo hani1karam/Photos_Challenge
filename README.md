@@ -1,5 +1,5 @@
 # Photos_Challenge
-this simple demo to clean Architecture MVVM 
+this simple demo to clean Architecture MVVM-C
 
 # screen of the app
 
