@@ -16,7 +16,6 @@ class HomeViewModel {
     let refreshControlCompelted = PublishSubject<Void>()
     let isLoadingSpinnerAvaliable = PublishSubject<Bool>()
     var itemSelected = PublishSubject<Photo>()
-
     let items = BehaviorRelay<[Photo]>(value: [])
     
     private let disposeBag = DisposeBag()
